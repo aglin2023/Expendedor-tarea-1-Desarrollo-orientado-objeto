@@ -4,8 +4,8 @@ public class Deposito<T>{
 
     private ArrayList<T> arrayList;
 
-    public Deposito(int Capacidad){
-        arrayList = new ArrayList<T>(Capacidad);
+    public Deposito(){
+        arrayList = new ArrayList<T>();
     }
 
     public void addObject(T producto) {
