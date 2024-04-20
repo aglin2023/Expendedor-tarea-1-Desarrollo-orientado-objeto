@@ -1,2 +1,4 @@
-public class Producto {
+public abstract class Producto {
+    public Producto(){}
+    public abstract String consumido();
 }

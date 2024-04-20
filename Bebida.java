@@ -1,2 +1,4 @@
-public class Bebida {
+public abstract class Bebida extends Producto{
+    public Bebida(){}
+
 }
