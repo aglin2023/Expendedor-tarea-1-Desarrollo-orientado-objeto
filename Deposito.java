@@ -8,14 +8,13 @@ public class Deposito<T>{
         arrayList = new ArrayList<T>(Capacidad);
     }
 
-    public void addObject(T bebida) {
-        arrayList.add(bebida);
+    public void addObject(T producto) {
+        arrayList.add(producto);
     }
 
     public T getObject() {
         if (arrayList.size() != 0)
             return arrayList.remove(0);
-
         return null;
     }
 }
