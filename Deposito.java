@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import java.util.ArrayList;
 public class Deposito<T>{
 
@@ -17,4 +18,7 @@ public class Deposito<T>{
 
         return null;
     }
+=======
+public class Deposito {
+>>>>>>> 7fb2863912f8fc7ff9353e4a8e16e5ee1d08fba2
 }
