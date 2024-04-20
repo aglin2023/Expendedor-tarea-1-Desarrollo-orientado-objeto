@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 package clases; 
-=======
-package clases;
->>>>>>> 3db3822d794068c10096b3980a4f5fedf9f5c593
 import java.util.ArrayList;
 public class Deposito<T>{
 
@@ -22,5 +18,4 @@ public class Deposito<T>{
 
         return null;
     }
-}
 }
