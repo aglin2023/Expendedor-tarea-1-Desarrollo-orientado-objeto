@@ -1,7 +1,8 @@
+package clases;
 import clases.Moneda;
-public abstract class Moneda500 extends Moneda{
+public class Moneda500 extends Moneda{
     public int getValor()
     {
-	return 500; 
+	return 500;
     }
 }

@@ -1,10 +1,11 @@
 package clases;
-public abstract class Moneda implements Comparable{
+public abstract class Moneda implements Comparable<Moneda>{
     public Moneda(){
     }
+
     public abstract int getValor();
 
-    public int compareTo(int v){
-	return this.getValor()-v;
+    public int compareTo(Moneda v){
+	return this.getValor()-v.getValor();
     }
 }
