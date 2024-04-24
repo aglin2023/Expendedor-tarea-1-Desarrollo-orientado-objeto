@@ -1,3 +1,5 @@
+package clases;
+import clases.*;
 public class Super8 extends Dulce{
     public Super8(){}
     public String consumido(){
