@@ -2,6 +2,7 @@ package clases;
 import clases.*;
 import enums.*;
 
+
 public class expendedor {
     private Deposito<Moneda> monVu;
 
@@ -37,11 +38,14 @@ public class expendedor {
 	    return null;
 	int vuelto = m.compareTo(l.getPrice());
 
-	if(vuelto < 0){
-	    // Agregar los exception || FALTO DINERO
-	    monVu.addObject(m);
-	    return null;
-	}
+	public void PagoIncorrectoException() throws PagoIncorrectoException{
+			if(vuelto < 0){
+				throw new PagoIncorrectoException("pago inferior al requerido");
+				monVu.addObject(m);
+				return null;
+			}
+		}
+
 
 	Producto p = null;
 
@@ -61,11 +65,15 @@ public class expendedor {
 	    p = super8.getObject();
 	}
 	
-	if(p == null){
-	    // Agregar los exception || NO HABIA PRODUCTO 
-	    monVu.addObject(m);
-	    return null;
-	}
+
+	public void noHayProducto() throws NoHayProductoException{
+			if(p == null){
+				throw new NoHayProductoException("no hay producto disponible");
+				monVu.addObject(m);
+				return null;
+			}
+		}
+
 	
 	// VUELTO
 	int cant_monedas100 = vuelto / 100;
