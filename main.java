@@ -8,6 +8,20 @@ public class main {
 	Moneda m3 = new Moneda1000();
 
 	expendedor e = new expendedor(3);
-	Comprador c = new Comprador(m3,ProductList.COCA,e);
+	try{
+	    System.out.println(e.comprar(m3,ProductList.COCA).consumido());
+	    System.out.println(e.comprar(m3,ProductList.COCA).consumido());
+	    System.out.println(e.comprar(m3,ProductList.COCA).consumido());
+	    System.out.println(e.comprar(m3,ProductList.COCA).consumido());
+	}
+	catch(PagoInsuficienteException i){
+	    System.out.println(i);
+	}
+	catch(PagoIncorrectoException i){
+	    System.out.println(i);
+	}
+	catch(NoHayProductoException i){
+	    System.out.println(i);
+	}
     }
 }

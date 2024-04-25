@@ -32,15 +32,15 @@ public class expendedor {
 	}
     }
 
-    public Producto comprar(Moneda m, ProductList l){
-	if(m == null)
-	    return null;
+    public Producto comprar(Moneda m, ProductList l) throws PagoInsuficienteException,PagoIncorrectoException,NoHayProductoException{
+	if(m == null){
+	    throw new PagoIncorrectoException("No ingresaste moneda");
+	}
 	int vuelto = m.compareTo(l.getPrice());
 
 	if(vuelto < 0){
-	    // Agregar los exception || FALTO DINERO
 	    monVu.addObject(m);
-	    return null;
+	    throw new PagoInsuficienteException("Le faltan: " + -1* vuelto + " monedas");
 	}
 
 	Producto p = null;
@@ -62,9 +62,8 @@ public class expendedor {
 	}
 	
 	if(p == null){
-	    // Agregar los exception || NO HABIA PRODUCTO 
 	    monVu.addObject(m);
-	    return null;
+	    throw new NoHayProductoException("No hay "+ l);
 	}
 	
 	// VUELTO
