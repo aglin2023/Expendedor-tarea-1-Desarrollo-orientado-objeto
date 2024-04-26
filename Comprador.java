@@ -8,13 +8,15 @@ public class Comprador {
     private String sonido;
     private int vueltoTotal;
 
-    public Comprador(Moneda m, ProductList c, expendedor e){
+    public Comprador(Moneda m, ProductList c, expendedor e) throws PagoIncorrectoException, PagoInsuficienteException, NoHayProductoException{
         clases.Producto productoComprado= e.comprar(m,c);
         Moneda aux= e.getVuelto();
-        vueltoTotal += aux.getValor();
-        aux = e.getVuelto();
+        while(aux != null) {
+            vueltoTotal += aux.getValor();
+            aux = e.getVuelto();
+        }
         if (productoComprado != null){
-            clases.Producto = clases.Producto.consumido();
+            sonido = productoComprado.consumido();
         }
     }
     public int cuantoVuelto() {
@@ -23,9 +25,7 @@ public class Comprador {
     }
     public String QueConsumiste(){
 
-        return clases.Producto;
-
-
+        return sonido;
 
     }
 }
