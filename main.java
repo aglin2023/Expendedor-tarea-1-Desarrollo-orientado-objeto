@@ -7,12 +7,17 @@ public class main {
 	Moneda m2 = new Moneda500();
 	Moneda m3 = new Moneda1000();
 
-	expendedor e = new expendedor(3);
+	expendedor e = new expendedor(2);
+
 	try{
-	    System.out.println(e.comprar(m3,ProductList.COCA).consumido());
-	    System.out.println(e.comprar(m3,ProductList.COCA).consumido());
-	    System.out.println(e.comprar(m3,ProductList.COCA).consumido());
-	    System.out.println(e.comprar(m3,ProductList.COCA).consumido());
+	    Comprador c = new Comprador(m3,ProductList.SNICKERS,e);
+	    System.out.println(c.cuantoVuelto());
+
+	    Comprador c2 = new Comprador(m3,ProductList.COCA,e);
+	    System.out.println(c2.QueConsumiste());
+
+	    Comprador c3 = new Comprador(m3,ProductList.COCA,e);
+	    System.out.println(c3.QueConsumiste());
 	}
 	catch(PagoInsuficienteException i){
 	    System.out.println(i);
