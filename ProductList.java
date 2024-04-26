@@ -1,5 +1,4 @@
-package enums;
-import clases.*;
+
 
 public enum ProductList{
     COCA(1000),SPRITE(300),FANTA(1200),SNICKERS(100),SUPER8(100);

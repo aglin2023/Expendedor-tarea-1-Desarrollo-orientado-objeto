@@ -1,4 +1,4 @@
-package clases;
+
 public abstract class Moneda implements Comparable<Moneda>{
     public Moneda(){
     }

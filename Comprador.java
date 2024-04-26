@@ -1,15 +1,10 @@
-package clases;
-
-import clases.Moneda;
-import clases.expendedor;
-import enums.ProductList;
 
 public class Comprador {
     private String sonido;
     private int vueltoTotal;
 
     public Comprador(Moneda m, ProductList c, expendedor e) throws PagoIncorrectoException, PagoInsuficienteException, NoHayProductoException{
-        clases.Producto productoComprado= e.comprar(m,c);
+        Producto productoComprado= e.comprar(m,c);
         Moneda aux= e.getVuelto();
         while(aux != null) {
             vueltoTotal += aux.getValor();

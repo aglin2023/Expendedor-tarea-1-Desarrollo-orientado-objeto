@@ -1,6 +1,6 @@
-package clases;
-import clases.*;
-import enums.*;
+
+
+
 
 public class expendedor {
     private Deposito<Moneda> monVu;
@@ -38,10 +38,14 @@ public class expendedor {
 	}
 	int vuelto = m.compareTo(l.getPrice());
 
+
 	if(vuelto < 0){
 	    monVu.addObject(m);
 	    throw new PagoInsuficienteException("Le faltan: " + -1* vuelto + " monedas");
 	}
+
+
+
 
 	Producto p = null;
 
@@ -60,12 +64,12 @@ public class expendedor {
 	if(l.equals(ProductList.SUPER8)){
 	    p = super8.getObject();
 	}
-	
+
 	if(p == null){
 	    monVu.addObject(m);
 	    throw new NoHayProductoException("No hay "+ l);
 	}
-	
+
 	// VUELTO
 	int cant_monedas100 = vuelto / 100;
 	for(int i = 0; i < cant_monedas100; i++){
