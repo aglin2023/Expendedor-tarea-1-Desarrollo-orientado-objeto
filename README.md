@@ -2,5 +2,5 @@
 
 Nombres de los integrantes del grupo:
 
-Agustín Andres Lineros Cid
-Sebastian Emir Garcias Cabrera
+-Agustín Andres Lineros Cid
+-Sebastian Emir Garcias Cabrera
