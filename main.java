@@ -1,5 +1,6 @@
-
+/**clase principal del programa que contiene el metodo para ejecutarlo */
 public class main {
+	/**metodo principal que inicia el programa y que realiza distintas compras*/
     public static void main (String[] args) {
 	Moneda m = new Moneda100();
 	Moneda m2 = new Moneda500();
